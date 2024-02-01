@@ -1,0 +1,109 @@
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    padding: 4rem 0;
+    transition: $fast;
+    @include media(md){
+        padding: 1.5rem 0;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        *{
+            color: $white;
+        }
+        .logo{
+            position: relative;
+            z-index: 999;
+            a{
+                text-transform: uppercase;
+                font-size: 2em;
+                font-weight: bold;
+                font-family: $Lato_Black;
+            }
+        }
+        .links{
+            list-style: none;
+            display: flex;
+            .link__container{
+                margin-left: 2em;
+                @include media(md){
+                    margin-left: 2rem;
+                    padding: 1.5rem 0;
+                    @include media(sm){
+                        margin-left: 20px;
+                    
+                    }
+                }
+                .link{
+                    font-size: .9em;
+                    font-family: $Lato_Bold;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    transition: $fast;
+                    @include media(md){
+                        font-size: 18px;
+                    }
+                    &:not(.link-contact){
+                     
+                        padding-bottom: .5em;
+                        border-bottom: 1.5px solid transparent;
+                        &:hover{
+                            border-color: $white;
+                        }
+                    }
+                    &.link-contact{
+                        padding: .8em 1.5em;
+                        background: transparent;
+                        color: $yellow;
+                        border: 2px solid $yellow;
+
+                        border-radius: 9999px;
+                        &:hover{
+                            background: $yellow;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            @include media(md){
+                position: fixed;
+                top: 0;
+                padding-top: 84px;
+                left: -100vh;
+                min-height: 150vh;
+                height: 100%;
+                width: 100%;
+                background: $blue;
+                flex-direction: column;
+                transition: $fast;
+            }
+
+            &.show{
+                @include media(md){
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    .logo{
+       
+        width: 150px;
+    }
+}
+
+header.scroll{
+    background: $blue;
+    padding: 1.5rem 0;
+    @include media(md){
+        padding: 1rem 0;
+        .links{
+            padding-top: 68px;
+            top: 0px;
+        }
+    }
+}

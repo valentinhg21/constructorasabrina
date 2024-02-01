@@ -1,0 +1,161 @@
+
+// REGISTRO DE FONTS
+@include register-font("Lato Black", 900, 'lato-black.woff', 'lato-black.woff2');
+@include register-font("Lato Bold", 700, 'lato-bold.woff', 'lato-bold.woff2');
+@include register-font("Lato Regular", 400, 'lato-regular.woff', 'lato-regular.woff2');
+@include register-font("Exo Regular", 400, 'exo-regular.woff', 'exo-regular.woff2');
+
+
+$Lato_Black: 'Lato Black';
+$Lato_Bold: 'Lato Bold';
+$Lato_Regular: 'Lato Regular';
+$Exo_Regular: 'Exo Regular';
+
+$fast: .25s all ease-in-out;
+$slow: .4s all ease-in-out;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: $Exo_Regular, sans-serif;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+img,picture{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+.theme{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 60px;
+    line-height: 110%;
+    font-family: $Lato_Black;
+    color: $blue;
+    @include media(md){
+        font-size: 46px;
+        line-height: 120%;
+    }
+    @include media(sm){
+        font-size: 30px;
+    }
+}
+
+h2{
+    font-family: $Lato_Black;
+    font-size: 40px;
+    line-height: 120%;
+    text-wrap: pretty;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: $blue;
+    @include media(md){
+        font-size: 30px;
+        line-height: 130%;
+        // margin-bottom: 28px;
+    }
+    @include media(sm){
+        font-size: 28px;
+        line-height: 140%;
+    }
+
+
+}
+.overlap{
+    background: $yellow;
+    width: 60px;
+    height: 5px;
+    margin-bottom: 20px;
+    display: flex;
+}
+p{
+    font-size: 20px;
+    font-style: normal;
+    font-family: $Exo_Regular;
+    line-height: 150%;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: $blue;
+    @include media(md){
+        font-size: 18px;
+        margin-bottom: 1.5rem;
+    }
+    @include media(sm){
+        font-size: 1rem;
+        
+    }
+
+}
+
+.section{
+    padding: 4rem 0;
+    scroll-margin-top: 4rem;
+    @include media(md){
+        padding: 2rem 0;
+    }
+    p{
+        font-size: 18px;
+        font-style: normal;
+        font-family: $Exo_Regular;
+        margin-bottom: 2rem;
+        color: $black;
+        @include media(md){
+            margin-bottom: 1.5rem;
+        }
+        @include media(sm){
+            font-size: 1rem;
+       
+        }
+    }
+}
+
+a{
+    font-family: $Exo_Regular;
+    text-decoration: none;
+    
+}
+ul{
+    list-style: none;
+}
+.hidden{
+    overflow: hidden;
+}
+
+.h-100{
+    height: 100%;
+}
+
+.whatsapp{
+    position: fixed;
+    bottom: 3em;
+    right: 1em;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $fast;
+    i{
+        font-size: 2.2em;
+        color: $white;
+    }
+    &:hover{
+        background: #21b858;
+    }
+}
