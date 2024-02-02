@@ -6,7 +6,7 @@ header{
     padding: 4rem 0;
     transition: $fast;
     @include media(md){
-        padding: 1.5rem 0;
+        padding: .5rem 0;
     }
     .menu{
         display: flex;
@@ -93,16 +93,20 @@ header{
     .logo{
        
         width: 150px;
+        @include media(md){
+            width: 120px;
+        }
     }
 }
 
 header.scroll{
     background: $blue;
-    padding: 1.5rem 0;
+    padding: .5rem 0;
     @include media(md){
-        padding: 1rem 0;
+     
         .links{
-            padding-top: 68px;
+            // padding-top: 68px;
+            padding-top: 100px;
             top: 0px;
         }
     }

@@ -87,9 +87,25 @@
     }
     &:hover{
         background: transparent;
-   
+  
         p{
             color: $blue;
+        }
+    }
+}
+
+.btn.blue-fill{
+    background: $yellow;
+  
+    border-color: $yellow;
+    p{
+        color: $white;
+    }
+    &:hover{
+        border-color: $blue;
+        background: $blue;
+        p{
+            color: $white;
         }
     }
 }
