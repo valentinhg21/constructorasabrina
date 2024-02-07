@@ -19,7 +19,7 @@ $resHTML  .= "Telefono: <strong>".$celular."</strong><br/>";
 $resHTML  .= "Maquina: <strong>".$area."</strong><br/>";
 $resHTML  .= "Mensaje: <strong>".$mensaje."</strong><br/><br/>";
 
-$destino = 'valentin@zetenta.com';
+$destino = 'contacto@sdmaquinariasviales.com.ar';
 $from = $destino;
 $to = $destino;
 

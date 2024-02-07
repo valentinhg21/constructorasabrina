@@ -29,14 +29,16 @@ $url_image: '../img/';
     }
     @if $folder != "" {
         background-image:
+
         url("#{$img_1}"), 
-        url("#{$img_2}");
+        url("#{$img_2}") !important;
         background-repeat: no-repeat;
         background-size: cover;
     }@else{
         background-image:
+ 
         url("#{$img_1}"), 
-        url("#{$img_2}");
+        url("#{$img_2}") !important;
         background-repeat: no-repeat;
         background-size: cover;
     }

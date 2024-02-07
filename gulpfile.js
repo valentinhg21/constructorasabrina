@@ -125,23 +125,17 @@ function scripts() {
   return gulp
 
     .src(paths.scripts.src[1])
-
     .pipe(uglify())
-
     .pipe(concat("index.min.js"))
-
     .pipe(gulp.dest(paths.dest + "/js"))
-
     .pipe(server.stream());
 }
 
 function utilsScript() {
   return gulp
-
     .src(paths.scripts.src[0])
-
+    .pipe(uglify())
     .pipe(gulp.dest(paths.dest + "/js/utils"))
-
     .pipe(server.stream());
 }
 

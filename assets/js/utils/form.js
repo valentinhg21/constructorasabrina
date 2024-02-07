@@ -27,20 +27,20 @@ export const form  = () => {
             // ENVIO DE FORMULARIO
             let HOME_URL = document.location.origin
             let cliente = new FormData();
-            console.log(HOME_URL)
+  
             inputs.forEach((input, index) => {
                 cliente.append(`dato_${index}`, input.value )
             })
             cliente.append('mensaje', textarea.value );
             // ENVIO DE FORMULARIO
-            fetch(`${HOME_URL}/constructora/mail.php`,{
+            fetch(`${HOME_URL}/mail.php`,{
                 method: 'POST',
                 body: cliente
             })
             .then((response) => response.json())
             .then(data => {
                 if(data.status === 200){
-                    console.log('enviado')
+                  
                     Swal.fire({
                         position: 'center',
                         icon: 'success',
@@ -48,9 +48,15 @@ export const form  = () => {
                         text: '¡Su mensaje se ha enviado correctamente!',
                         confirmButtonText: "Cerrar",
               
-                        timer: 2000
+                   
                       })
-
+                      inputs.forEach((input, index) => {
+    
+                                input.value = '';
+                           
+                         
+                      })
+                      textarea.value = "";
     
                 }else{
                     Swal.fire({
@@ -60,12 +66,12 @@ export const form  = () => {
                         text: '¡Inténtelo de nuevo más tarde!',
                         confirmButtonText: "Cerrar",
                     
-                        timer: 2000
+                      
                       })
                 }
             })
             .catch((err) => {
-                console.log('error')
+            
                 Swal.fire({
                     position: 'center',
                     icon: 'error',
@@ -73,7 +79,7 @@ export const form  = () => {
                     text: '¡Inténtelo de nuevo más tarde!',
                     confirmButtonText: "Cerrar",
          
-                    timer: 2000
+               
                   })
             })
         }

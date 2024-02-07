@@ -1,14 +1,1 @@
-export const select = () => {
-    const select = document.querySelector('.input-field-select')
-    const list = document.querySelector('.list')
-    const input = select.querySelector('input')
-    select.addEventListener('click', e => {
-        list.classList.toggle('active')
-        let options = list.querySelectorAll('li')
-        options.forEach(option => {
-            option.addEventListener('click', e => {
-                input.value = option.textContent
-            })
-        });
-    })
-}
+const select=()=>{var e=document.querySelector(".input-field-select");const t=document.querySelector(".list"),c=e.querySelector("input");e.addEventListener("click",e=>{t.classList.toggle("active"),t.querySelectorAll("li").forEach(t=>{t.addEventListener("click",e=>{c.value=t.textContent})})})};export{select};
